@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blob Maker</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="wrapper">
         <div class="output">
             <div class="blob">
-
             </div>
         </div>
         <div class="dimensions">
@@ -22,16 +23,18 @@
                 <label for="blob-width">Width</label>
                 <input type="number" value="112" id="blob-width">
             </div>
-            <div class="sliders">
-                <input type="range" value="30">
-                <input type="range" value="80">
-                <input type="range" value="60">
-                <input type="range" value="40">
-            </div>
-            <input type="text" id="css-code" readonly>
-            <button id="copy">Copy</button>
         </div>
+        <div class="sliders">
+            <input type="range" value="30">
+            <input type="range" value="80">
+            <input type="range" value="60">
+            <input type="range" value="40">
+        </div>
+        <input type="text" id="css-code" readonly>
+        <button id="copy">Copy</button>
+
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
