@@ -1,9 +1,11 @@
 # 🌈 Blob Maker - Generador de Formas Orgánicas CSS
 
 ## 📝 Descripción
+
 Blob Maker es una aplicación web interactiva que permite crear formas orgánicas (blobs) personalizables y obtener el código CSS correspondiente para implementarlas en tus proyectos. Perfecta para diseñadores y desarrolladores que buscan añadir elementos visuales únicos a sus interfaces.
 
 ## ✨ Características Principales
+
 - 🎨 Generador de formas orgánicas con bordes curvos personalizables
 
 - 📏 Control de dimensiones (alto y ancho)
@@ -17,6 +19,7 @@ Blob Maker es una aplicación web interactiva que permite crear formas orgánica
 - 🖥️ Interfaz intuitiva y responsive
 
 ## 🛠️ Tecnologías Utilizadas
+
 - **HTML5** - Estructura de la aplicación
 
 - **CSS3** - Estilos y diseño responsive
@@ -26,10 +29,13 @@ Blob Maker es una aplicación web interactiva que permite crear formas orgánica
 - **Clipboard API** - Para la función de copiar al portapapeles
 
 ## 🎮 Funcionamiento
+
 La aplicación funciona mediante la manipulación de la propiedad `border-radius` de CSS, que permite crear formas complejas cuando se especifican los ocho valores posibles (cuatro esquinas horizontales y cuatro verticales).
 
 ## 💻 Código Destacado
+
 ### Manipulación del DOM y Event Listeners
+
 ```javascript
 let sliders = document.querySelectorAll("input[type='range']");
 sliders.forEach(function(slider){
@@ -41,6 +47,7 @@ inputs.forEach(function(input){
     input.addEventListener("change", createBlob);
 });
 ```
+
 Este fragmento:
 
 1. Selecciona todos los elementos de tipo `range` (deslizadores) y `number` (inputs numéricos).
@@ -48,6 +55,7 @@ Este fragmento:
 1. Añade event listeners a cada uno para ejecutar la función `createBlob` cuando cambian.
 
 ### Función Principal `createBlob`
+
 ```javascript
 function createBlob() {
     let radiusOne = sliders[0].value;
@@ -66,6 +74,7 @@ function createBlob() {
     outputCode.value = blobStyle;
 }
 ```
+
 Esta función:
 
 1. Obtiene los valores actuales de los controles.
@@ -77,6 +86,7 @@ Esta función:
 1. Muestra el código CSS generado en el área de texto.
 
 ### Función para Copiar al Portapapeles
+
 ```javascript
 document.getElementById("copy").addEventListener("click", function(){
     navigator.clipboard.writeText(outputCode.value)
@@ -85,9 +95,11 @@ document.getElementById("copy").addEventListener("click", function(){
     })
 });
 ```
+
 Utiliza la Clipboard API moderna para copiar el texto sin necesidad de elementos intermedios.
 
 ## 🚀 Cómo Usar la Aplicación
+
 1. **Ajusta las dimensiones**:
 
     - Cambia los valores de altura (Height) y ancho (Width) para modificar el tamaño del blob.
@@ -111,6 +123,7 @@ Utiliza la Clipboard API moderna para copiar el texto sin necesidad de elementos
     - Aplica la clase a cualquier elemento HTML.
 
 ## 📥 Instalación y Desarrollo
+
 Para ejecutar localmente:
 
 ```bash
@@ -120,9 +133,11 @@ git clone https://github.com/tu-usuario/blob-maker.git
 # Abre el archivo index.html en tu navegador
 # No se requieren dependencias adicionales
 ```
+
 La aplicación no requiere ningún servidor ni dependencias externas, ya que funciona completamente en el lado del cliente.
 
 ## 🌍 Compatibilidad
+
 La aplicación funciona en todos los navegadores modernos que soportan:
 
 - CSS border-radius con valores complejos.
