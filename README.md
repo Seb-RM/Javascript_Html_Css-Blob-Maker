@@ -128,7 +128,7 @@ Para ejecutar localmente:
 
 ```bash
 # Clona el repositorio
-git clone https://github.com/tu-usuario/blob-maker.git
+git clone https://github.com/Seb-RM/Javascript_Html_Css-Blob-Maker.git
 
 # Abre el archivo index.html en tu navegador
 # No se requieren dependencias adicionales
